@@ -1,3 +1,4 @@
 yandex-chain
 streamlit
+streamlit-chat
 langchain
