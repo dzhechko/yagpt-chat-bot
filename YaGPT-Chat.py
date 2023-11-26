@@ -1,4 +1,4 @@
-# создаем простое streamlit приложение для работы с вашими pdf-файлами при помощи YaGPT
+# создаем простое streamlit приложение для чата с YaGPT через веб, используя публичный API
 
 import streamlit as st
 import os
@@ -15,9 +15,6 @@ from streamlit_chat import message
 # yagpt_api_key = st.secrets["yagpt_api_key"]
 # yagpt_folder_id = st.secrets["yagpt_folder_id"]
 # yagpt_api_id = st.secrets["yagpt_api_id"]
-# mdb_os_pwd = st.secrets["mdb_os_pwd"]
-# mdb_os_hosts = st.secrets["mdb_os_hosts"].split(",")
-# mdb_os_index_name = st.secrets["mdb_os_index_name"]
 
 # это основная функция, которая запускает приложение streamlit
 def main():
