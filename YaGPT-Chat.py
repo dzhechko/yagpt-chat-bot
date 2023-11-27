@@ -11,10 +11,6 @@ from streamlit_chat import message
 
 # from dotenv import load_dotenv
 
-# использовать системные переменные из облака streamlit (secrets)
-# yagpt_api_key = st.secrets["yagpt_api_key"]
-# yagpt_folder_id = st.secrets["yagpt_folder_id"]
-# yagpt_api_id = st.secrets["yagpt_api_id"]
 
 # это основная функция, которая запускает приложение streamlit
 def main():
@@ -50,6 +46,11 @@ def main():
     yagpt_folder_id = ""
     yagpt_api_id = ""
     yagpt_api_key = ""
+
+    # использовать системные переменные из облака streamlit (secrets)
+    yagpt_api_key = st.secrets["yagpt_api_key"]
+    yagpt_folder_id = st.secrets["yagpt_folder_id"]
+    yagpt_api_id = st.secrets["yagpt_api_id"]
 
     yagpt_folder_id = st.sidebar.text_input("YAGPT_FOLDER_ID", type='password', value=yagpt_folder_id)
     yagpt_api_id = st.sidebar.text_input("YAGPT_API_ID", type='password', value=yagpt_api_id)
