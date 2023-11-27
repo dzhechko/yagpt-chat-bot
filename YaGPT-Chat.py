@@ -43,18 +43,18 @@ def main():
         ''')
     global  yagpt_folder_id, yagpt_api_id, yagpt_api_key
 
-    yagpt_folder_id = ""
-    yagpt_api_id = ""
-    yagpt_api_key = ""
+    folder_id = ""
+    api_id = ""
+    api_key = ""
 
     # использовать системные переменные из облака streamlit (secrets)
-    yagpt_api_key = st.secrets["yagpt_api_key"]
-    yagpt_folder_id = st.secrets["yagpt_folder_id"]
-    yagpt_api_id = st.secrets["yagpt_api_id"]
+    folder_id = st.secrets["yagpt_folder_id"]
+    # api_id = st.secrets["yagpt_api_id"]
+    # api_key = st.secrets["yagpt_api_key"]
 
-    yagpt_folder_id = st.sidebar.text_input("YAGPT_FOLDER_ID", type='password', value=yagpt_folder_id)
-    yagpt_api_id = st.sidebar.text_input("YAGPT_API_ID", type='password', value=yagpt_api_id)
-    yagpt_api_key = st.sidebar.text_input("YAGPT_API_KEY", type='password', value=yagpt_api_key)
+    yagpt_folder_id = st.sidebar.text_input("YAGPT_FOLDER_ID", type='password', value=folder_id)
+    yagpt_api_id = st.sidebar.text_input("YAGPT_API_ID", type='password', value=api_id)
+    yagpt_api_key = st.sidebar.text_input("YAGPT_API_KEY", type='password', value=api_key)
     
     yagpt_prompt = st.sidebar.text_input("Промпт-инструкция для YaGPT")
     yagpt_temperature = st.sidebar.slider("YaGPT температура", 0.0, 1.0, 0.6)
