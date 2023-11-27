@@ -15,6 +15,7 @@ from streamlit_chat import message
 # yagpt_api_key = st.secrets["yagpt_api_key"]
 # yagpt_folder_id = st.secrets["yagpt_folder_id"]
 # yagpt_api_id = st.secrets["yagpt_api_id"]
+yagpt_folder_id = b1gt4k50s3ga5ku7jc6h
 
 # это основная функция, которая запускает приложение streamlit
 def main():
