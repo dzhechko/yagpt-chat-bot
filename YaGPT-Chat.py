@@ -48,7 +48,7 @@ def main():
 
     global  yagpt_folder_id, yagpt_api_id, yagpt_api_key
     if yagpt_folder_id is None: 
-        yagpt_folder_id = st.sidebar.text_input("YAGPT_FOLDER_ID")
+        yagpt_folder_id = st.sidebar.text_input("YAGPT_FOLDER_ID", value=None)
     else: 
         yagpt_folder_id = st.sidebar.text_input("YAGPT_FOLDER_ID", value=yagpt_folder_id)
     
