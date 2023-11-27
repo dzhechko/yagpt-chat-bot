@@ -45,15 +45,15 @@ def main():
         - [Streamlit](https://streamlit.io/)
         - [LangChain](https://python.langchain.com/)
         ''')
-
     global  yagpt_folder_id, yagpt_api_id, yagpt_api_key
-    # if yagpt_folder_id is None: 
-    #     value_01 = 'None'
-    # else: 
-    #     value_01 = yagpt_folder_id
-    yagpt_folder_id = st.sidebar.text_input("YAGPT_FOLDER_ID", type='password')
-    yagpt_api_id = st.sidebar.text_input("YAGPT_API_ID", type='password')
-    yagpt_api_key = st.sidebar.text_input("YAGPT_API_KEY", type='password')
+
+    yagpt_folder_id = ""
+    yagpt_api_id = ""
+    yagpt_api_key = ""
+
+    yagpt_folder_id = st.sidebar.text_input("YAGPT_FOLDER_ID", type='password', value=yagpt_folder_id)
+    yagpt_api_id = st.sidebar.text_input("YAGPT_API_ID", type='password', value=yagpt_api_id)
+    yagpt_api_key = st.sidebar.text_input("YAGPT_API_KEY", type='password', value=yagpt_api_key)
     
     yagpt_prompt = st.sidebar.text_input("Промпт-инструкция для YaGPT")
     yagpt_temperature = st.sidebar.slider("YaGPT температура", 0.0, 1.0, 0.6)
@@ -63,6 +63,7 @@ def main():
     if not yagpt_api_key or not yagpt_folder_id or not yagpt_api_id:
         st.warning(
             "Пожалуйста, задайте свои учетные данные (в secrets/.env или в раскрывающейся панели слева) для запуска этого приложения.")
+
 
     # Логика обработки сообщений от пользователей
     # инициализировать историю чата, если ее пока нет 
