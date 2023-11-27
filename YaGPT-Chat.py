@@ -47,11 +47,7 @@ def main():
         ''')
 
     global  yagpt_folder_id, yagpt_api_id, yagpt_api_key
-    if yagpt_folder_id is None: 
-        yagpt_folder_id = st.sidebar.text_input("YAGPT_FOLDER_ID", value=None)
-    else: 
-        yagpt_folder_id = st.sidebar.text_input("YAGPT_FOLDER_ID", value=yagpt_folder_id)
-    
+    yagpt_folder_id = st.sidebar.text_input("YAGPT_FOLDER_ID")
     yagpt_api_id = st.sidebar.text_input("YAGPT_API_ID")
     yagpt_api_key = st.sidebar.text_input("YAGPT_API_KEY", type='password')
     yagpt_prompt = st.sidebar.text_input("Промпт-инструкция для YaGPT")
