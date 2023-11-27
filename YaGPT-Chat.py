@@ -49,8 +49,8 @@ def main():
 
     # использовать системные переменные из облака streamlit (secrets)
     folder_id = st.secrets["yagpt_folder_id"]
-    # api_id = st.secrets["yagpt_api_id"]
-    # api_key = st.secrets["yagpt_api_key"]
+    api_id = st.secrets["yagpt_api_id"]
+    api_key = st.secrets["yagpt_api_key"]
 
     yagpt_folder_id = st.sidebar.text_input("YAGPT_FOLDER_ID", type='password', value=folder_id)
     yagpt_api_id = st.sidebar.text_input("YAGPT_API_ID", type='password', value=api_id)
