@@ -47,9 +47,16 @@ def main():
         ''')
 
     global  yagpt_folder_id, yagpt_api_id, yagpt_api_key
-    yagpt_folder_id = st.sidebar.text_input("YAGPT_FOLDER_ID")
-    yagpt_api_id = st.sidebar.text_input("YAGPT_API_ID")
-    yagpt_api_key = st.sidebar.text_input("YAGPT_API_KEY", type='password')
+    if not yagpt_folder_id:
+        folder_id = st.sidebar.text_input("YAGPT_FOLDER_ID", type='password')
+    else:
+        folder_id = st.sidebar.text_input("YAGPT_FOLDER_ID", type='password', value=yagpt_folder_id)
+    yagpt_folder_id = folder_id
+
+
+    api_id = st.sidebar.text_input("YAGPT_API_ID", type='password')
+    api_key = st.sidebar.text_input("YAGPT_API_KEY", type='password')
+    
     yagpt_prompt = st.sidebar.text_input("Промпт-инструкция для YaGPT")
     yagpt_temperature = st.sidebar.slider("YaGPT температура", 0.0, 1.0, 0.6)
     yagpt_max_tokens = st.sidebar.slider("YaGPT макс. кол-во токенов", 200, 7400, 5000)
