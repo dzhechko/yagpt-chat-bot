@@ -47,10 +47,10 @@ def main():
         ''')
 
     global  yagpt_folder_id, yagpt_api_id, yagpt_api_key
-    if yagpt_folder_id is None: 
-        value_01 = 'None'
-    else: 
-        value_01 = yagpt_folder_id
+    # if yagpt_folder_id is None: 
+    #     value_01 = 'None'
+    # else: 
+    #     value_01 = yagpt_folder_id
     yagpt_folder_id = st.sidebar.text_input("YAGPT_FOLDER_ID", type='password')
     yagpt_api_id = st.sidebar.text_input("YAGPT_API_ID", type='password')
     yagpt_api_key = st.sidebar.text_input("YAGPT_API_KEY", type='password')
