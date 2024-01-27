@@ -79,7 +79,7 @@ def main():
     if st.session_state['ready']:
 
         # обращение к модели YaGPT
-        llm = YandexLLM(api_key=yagpt_api_key, folder_id=yagpt_folder_id, temperature = yagpt_temperature, max_tokens=yagpt_max_tokens)        
+        llm = YandexLLM(api_key=yagpt_api_key, folder_id=yagpt_folder_id, temperature = yagpt_temperature, max_tokens=yagpt_max_tokens, use_lite=True)        
         str2 = """Вопрос: {question}
         Твой ответ:"
         """
